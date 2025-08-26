@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Botia</title>
+    <link rel="stylesheet" href="../css/style.css"> <!-- Asegúrate que esté en la misma carpeta -->
 </head>
 <body>
-    <img src="/assents/logoBotia.png" alt="Botia Logo" >
-    <h1>Bienvenido</h1>
+    <div class="container">
+        <!-- Caja de bienvenida -->
+        <div class="welcome-box">
+            <img src="/assents/logoBotia.png" alt="Botia Logo" style="max-width: 200px; margin-bottom: 1rem;">
+            <h1>Bienvenido</h1>
+            <h2>Elige el rubro de tu empresa</h2>
+            <p>Selecciona la opción que más se ajuste:</p>
 
-    <h2>Elige el rubro de tu empresa</h2>
-    <p>Selecciona la opción que más se ajuste:</p>
-
-    <a href="ecommerce.html">
-        <button>E-commerce</button>
-    </a>
-    
-    <a href="servicios.html">
-        <button>Servicios</button>
-    </a>
-
+            <!-- Botones -->
+            <div style="margin-top: 1.5rem;">
+                <a href="ecommerce.html">
+                    <button>E-commerce</button>
+                </a>
+                <a href="servicios.html">
+                    <button>Servicios</button>
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
