@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Botia - Servicios</title>
-    <link rel="stylesheet" href="../css/style.css">
- <!-- Conexión al CSS -->
+    <link rel="stylesheet" href="../css/servicios.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/3.0.2/jspdf.umd.min.js"></script>
 </head>
+
 <body>
     <div class="container">
         <img src="/assents/logoBotia.png" alt="Botia Logo" style="max-width: 180px; margin-bottom: 1rem;">
@@ -14,49 +16,58 @@
         <div class="form-section">
             <h1>Formulario - Servicios</h1>
 
-            <p>¿Cuál es el nombre de tu empresa/servicio?</p>
-            <input type="text" placeholder="Escribe el nombre">
+            <form id="formServicios">
+                <p>¿Cuál es el nombre de tu empresa/servicio?</p>
+                <input id="empresa" type="text" placeholder="Escribe el nombre" required>
 
-            <p>¿Qué tipo de servicio ofreces?</p>
-            <input type="text" placeholder="Ej. cursos, citas médicas, asesorías...">
+                <p>¿Qué tipo de servicio ofreces?</p>
+                <input id="tipoServicio" type="text" placeholder="Ej. cursos, citas médicas, asesorías..." required>
 
-            <p>¿Cuál es tu público objetivo principal?</p>
-            <input type="text" placeholder="Ej. estudiantes, pacientes, ejecutivos...">
+                <p>¿Cuál es tu público objetivo principal?</p>
+                <input id="publico" type="text" placeholder="Ej. estudiantes, pacientes, ejecutivos..." required>
 
-            <p>¿Qué servicios principales deseas automatizar?</p>
-            <input type="text" placeholder="Servicios a automatizar">
+                <p>¿Qué servicios principales deseas automatizar?</p>
+                <input id="automatizar" type="text" placeholder="Servicios a automatizar" required>
 
-            <p>¿Qué información debe brindar el cliente para acceder al servicio?</p>
-            <input type="text" placeholder="Ej. datos personales, motivo de la cita...">
+                <p>¿Qué información debe brindar el cliente para acceder al servicio?</p>
+                <input id="infoCliente" type="text" placeholder="Ej. datos personales, motivo de la cita..." required>
 
-            <p>¿Tus servicios requieren pasos previos antes de confirmarse?</p>
-            <input type="text" placeholder="Ej. validación de horarios, pago anticipado">
+                <p>¿Tus servicios requieren pasos previos antes de confirmarse?</p>
+                <input id="pasosPrevios" type="text" placeholder="Ej. validación de horarios, pago anticipado" required>
 
-            <p>¿Cómo reservas actualmente tus servicios?</p>
-            <input type="text" placeholder="Ej. llamada, formulario, WhatsApp">
+                <p>¿Cómo reservas actualmente tus servicios?</p>
+                <input id="reservas" type="text" placeholder="Ej. llamada, formulario, WhatsApp" required>
 
-            <p>¿Necesitas mostrar disponibilidad de horarios en tiempo real?</p>
-            <input type="text" placeholder="Sí / No">
+                <p>¿Necesitas mostrar disponibilidad de horarios en tiempo real?</p>
+                <select id="fotos" required>
+                    <option value="">Selecciona...</option>
+                    <option value="Sí">Sí</option>
+                    <option value="No">No</option>
+                </select>
 
-            <p>¿Qué métodos de pago aceptas?</p>
-            <input type="text" placeholder="Ej. tarjeta, efectivo, transferencia">
+                <p>¿Qué métodos de pago aceptas?</p>
+                <input id="metodosPago" type="text" placeholder="Ej. tarjeta, efectivo, transferencia" required>
 
-            <p>¿Cuál es tu política de cancelaciones o reprogramaciones?</p>
-            <input type="text" placeholder="Describe tu política">
+                <p>¿Cuál es tu política de cancelaciones o reprogramaciones?</p>
+                <input id="politica" type="text" placeholder="Describe tu política" required>
 
-            <p>¿Qué preguntas frecuentes recibes antes de la contratación?</p>
-            <input type="text" placeholder="Ej. duración, costos, modalidad...">
+                <p>¿Qué preguntas frecuentes recibes antes de la contratación?</p>
+                <input id="faq" type="text" placeholder="Ej. duración, costos, modalidad..." required>
 
-            <p>¿En qué canales atiendes a tus clientes?</p>
-            <input type="text" placeholder="Ej. WhatsApp, web, call center">
+                <p>¿En qué canales atiendes a tus clientes?</p>
+                <input id="canales" type="text" placeholder="Ej. WhatsApp, web, call center" required>
 
-            <!-- Botón Final -->
-            <div style="margin-top: 2rem; text-align:center;">
-                <a href="final.html">
-                    <button>Finalizar</button>
-                </a>
-            </div>
+                <p id="mensajeError" style="color: #2502fe; font-size: 14px;"></p>
+
+                <!-- Botón Finalizar -->
+                <div style="margin-top: 2rem; text-align:center;">
+                    <button id="btnFinalizar" type="submit" disabled>Finalizar</button>
+                </div>
+            </form>
         </div>
     </div>
+
+    <script src="../js/servicios.js"></script>
 </body>
+
 </html>

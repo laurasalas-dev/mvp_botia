@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
-    <img src="/assents/logoBotia.png" alt="Botia Logo" >
-    <h1>Bienvenido a Botia</h1>
-    <p>Para hacer esta experiencia más personal, cuéntanos:</p>
+    <div class="container">
+        <div class="card">
+            <img src="assents/logoBotia.png" alt="Botia Logo" class="logo">
 
-    <h2>¿Cómo te llamas?</h2>
-    <input placeholder="Escribe tu nombre">
-    
-    <a href="pages/inicio.html">
-        <button>Siguiente</button>
-    </a>
+            <h1 class="titulo">Bienvenido a Botia</h1>
+            <p class="subtexto">Para hacer esta experiencia más personal, cuéntanos:</p>
 
-    
+            <h2 class="pregunta">¿Cómo te llamas?</h2>
+            <input id="nombreUsuario" class="input-text" placeholder="Escribe tu nombre">
+
+            <p id="mensajeError" class="mensaje-error"></p>
+
+            <button id="btnSiguiente" class="btn">Siguiente</button>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
 </body>
+
 </html>
