@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Botia - E-commerce</title>
-   <link rel="stylesheet" href="../css/style.css">
- <!-- Conexión al CSS -->
+    <link rel="stylesheet" href="../css/ecommerce.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/3.0.2/jspdf.umd.min.js"></script>
 </head>
+
 <body>
     <div class="container">
         <img src="/assents/logoBotia.png" alt="Botia Logo" style="max-width: 180px; margin-bottom: 1rem;">
@@ -14,52 +16,61 @@
         <div class="form-section">
             <h1>Formulario - E-commerce</h1>
 
-            <p>¿Cuál es el nombre de tu empresa y tu tienda online?</p>
-            <input type="text" placeholder="Nombre de la empresa y tienda">
+            <form id="formEcommerce">
+                <p>¿Cuál es el nombre de tu empresa y tu tienda online?</p>
+                <input type="text" id="empresa" placeholder="Nombre de la empresa y tienda" required>
 
-            <p>¿En qué categoría o rubro se encuentran tus productos?</p>
-            <input type="text" placeholder="Ej. moda, alimentos, electrónica...">
+                <p>¿En qué categoría o rubro se encuentran tus productos?</p>
+                <input type="text" id="categoria" placeholder="Ej. moda, alimentos, electrónica..." required>
 
-            <p>¿Cuál es tu público objetivo principal?</p>
-            <input type="text" placeholder="Ej. hombres 20-35 años, familias, empresas...">
+                <p>¿Cuál es tu público objetivo principal?</p>
+                <input type="text" id="publico" placeholder="Ej. hombres 20-35 años, familias, empresas..." required>
 
-            <p>¿Cuántos productos tienes actualmente en tu catálogo?</p>
-            <input type="text" placeholder="Número de productos">
+                <p>¿Cuántos productos tienes actualmente en tu catálogo?</p>
+                <input type="number" id="productos" placeholder="Número de productos" required>
 
-            <p>¿Tus productos tienen variaciones?</p>
-            <input type="text" placeholder="Ej. tallas, colores, presentaciones">
+                <p>¿Tus productos tienen variaciones?</p>
+                <input type="text" id="variaciones" placeholder="Ej. tallas, colores, presentaciones">
 
-            <p>¿Qué información mínima debe mostrar cada producto?</p>
-            <input type="text" placeholder="Ej. precio, foto, stock, descripción...">
+                <p>¿Qué información mínima debe mostrar cada producto?</p>
+                <input type="text" id="infoProducto" placeholder="Ej. precio, foto, stock, descripción...">
 
-            <p>¿Tienes fotos y descripciones listas para subir al sistema?</p>
-            <input type="text" placeholder="Sí / No">
+                <p>¿Tienes fotos y descripciones listas para subir al sistema?</p>
+                <select id="fotos" required>
+                    <option value="">Selecciona...</option>
+                    <option value="Sí">Sí</option>
+                    <option value="No">No</option>
+                </select>
 
-            <p>¿Cuál es el flujo actual de compra de un cliente?</p>
-            <input type="text" placeholder="Ej. carrito → pago → confirmación">
+                <p>¿Cuál es el flujo actual de compra de un cliente?</p>
+                <input type="text" id="flujo" placeholder="Ej. carrito → pago → confirmación">
 
-            <p>¿Qué métodos de pago aceptas?</p>
-            <input type="text" placeholder="Ej. tarjeta, Yape/Plin, transferencia...">
+                <p>¿Qué métodos de pago aceptas?</p>
+                <input type="text" id="pagos" placeholder="Ej. tarjeta, Yape/Plin, transferencia..." required>
 
-            <p>¿Cuál es tu política de envíos?</p>
-            <input type="text" placeholder="Cobertura, tiempos, costos">
+                <p>¿Cuál es tu política de envíos?</p>
+                <input type="text" id="envios" placeholder="Cobertura, tiempos, costos">
 
-            <p>¿Cuál es tu política de devoluciones o cambios?</p>
-            <input type="text" placeholder="Describe tu política">
+                <p>¿Cuál es tu política de devoluciones o cambios?</p>
+                <input type="text" id="devoluciones" placeholder="Describe tu política">
 
-            <p>¿Qué dudas frecuentes tienen tus clientes antes de comprar?</p>
-            <input type="text" placeholder="Ej. tallas, garantía, envíos...">
+                <p>¿Qué dudas frecuentes tienen tus clientes antes de comprar?</p>
+                <input type="text" id="faq" placeholder="Ej. tallas, garantía, envíos...">
 
-            <p>¿En qué canales brindas soporte actualmente?</p>
-            <input type="text" placeholder="Ej. WhatsApp, email, call center">
+                <p>¿En qué canales brindas soporte actualmente?</p>
+                <input type="text" id="soporte" placeholder="Ej. WhatsApp, email, call center">
 
-            <!-- Botón Final -->
-            <div style="margin-top: 2rem; text-align:center;">
-                <a href="final.html">
-                    <button>Finalizar</button>
-                </a>
-            </div>
+                <p id="mensajeError" style="color: #2502fe; font-size: 14px;"></p>
+
+                <!-- Botón Finalizar -->
+                <div style="margin-top: 2rem; text-align:center;">
+                    <button type="submit" id="btnFinalizar" disabled>Finalizar</button>
+                </div>
+            </form>
         </div>
     </div>
+
+    <script src="../js/ecommerce.js"></script>
 </body>
+
 </html>

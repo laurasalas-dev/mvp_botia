@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body {
+  background-color: #f3f6fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+
+.container {
+  max-width: 500px;
+  width: 100%;
+}
+
+
+.welcome-box {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+
+.welcome-box img {
+  display: block;
+  margin: 0 auto 20px auto;
+  max-width: 160px;
+}
+
+
+.welcome-box h1 {
+  color: #0d47a1;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.welcome-box h2 {
+  color: #1565c0;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.welcome-box p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+
+.welcome-box button {
+  background-color: #03a9f4;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 20px;
+  margin: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  min-width: 140px;
+}
+
+.welcome-box button:hover {
+  background-color: #0288d1;
+  transform: scale(1.05);
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
