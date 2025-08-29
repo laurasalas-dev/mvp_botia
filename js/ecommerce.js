@@ -119,15 +119,14 @@ document.addEventListener("DOMContentLoaded", () => {
             "¿Qué dudas frecuentes tienen tus clientes antes de comprar?": data.faq,
             "¿En qué canales brindas soporte actualmente?": data.soporte
         })) {
-            // Si la posición vertical actual es mayor que la altura de la página menos el margen,
-            // se agrega una nueva página.
+            
             if (y + lineHeight * 2 > pageHeight - bottomMargin) {
                 doc.addPage();
-                y = 30; // Reinicia la posición vertical para la nueva página.
+                y = 30; 
             }
 
             doc.text(pregunta, 10, y);
-            doc.text(respuesta, 10, y + lineHeight); // Muestra la respuesta en la siguiente línea
+            doc.text(respuesta, 10, y + lineHeight); 
             y += lineHeight * 2;
         }
 
